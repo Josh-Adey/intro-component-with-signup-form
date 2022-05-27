@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <link rel="stylesheet" href="style.css" >
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+  
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js" inwsUT"anonymous"></script>
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&family=Red+Hat+Display:wght@700&display=swap" rel="stylesheet">
+  <title>Task 3 | Intro component with sign up form</title>
+
+  <!-- footer styling -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body style=" background-color: hsl(0, 100%, 74%);">
+
+ <!-- 2 row colums -->
+ <div class="container-fluid padding">
+  <div class="main-container row padding" >
+     <div class="intro-container col-lg-6" >
+        
+           <h1> Learn to code by watching others </h1>
+           <p> See how experienced developers solve problems in real-time. Watching scripted tutorials is great but undestanding how developers think is invaluable. </p>
+     </div>
+     <div class="signup-container col-lg-6" padding >
+        <div class="signup-detail">
+          <p> <b> Try it free 7 days </b> then $20/mo. thereafter </p> 
+
+        </div>
+        <div class="signup-form" >
+           <form method=" post"> 
+               <input type="text" for="fname" name="first-name" placeholder="First Name" autocomplete="name" required /> <br> </br>
+               <input type="text" id="lname" for="name" name="last-name" placeholder="Last Name" autocomplete="name" required /> <br> </br>
+               <input type="email" id="email" class="mail" for="email" name="email-address" placeholder="Email Address" autocomplete="name" required /> <br> </br>
+               <input type="password" id="password" minlength="8" for="name" name="password" placeholder="Password" autocomplete="name" required /> <br> </br>  
+               <input type="submit" value="CLAIM YOUR FREE TRIAL" class="submit"> 
+               <p class="signature-text"> 
+               By clicking the button, you are agreeing to our
+               <a href="#" class="signature-link"> Terms and Services </a> 
+               </p>
+           </form>
+        </div>
+     </div>
+  
+      <!-- footer markup -->
+     <footer>
+       <p class="attribution">
+         Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+         Coded by <a href="https://github.com/Josh-Adey">Joshua Adeoye</a>.
+       </p>
+     </footer>
+  </div>
+ </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+
+     <!-- javascript form validation -->
+  <script>
+   const email = document.getElementById("email");
+
+email.addEventListener("input", function (event) {
+  if (email.validity.typeMismatch) {
+    email.setCustomValidity(" looks like this is not an email");
+    email.reportValidity();
+  } else {
+    email.setCustomValidity("");
+  }
+});
+  
+  </script>
+</body>
+</html>
